@@ -1,34 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 0x-Protocol-DeFI-Swap-NextJS
+<a href="http://youtube.a3b.io" target="_blank"><img src="https://github.com/net2devcrypto/misc/blob/main/n2Dex-img.png" width="200" height="80"></a>
 
-## Getting Started
+👑 This is the best 0x Protocol DeFI Swap App built for NextJS - Add this to your existing NextJS Project for a full fledged powerful DeFI Swap Interface Functionality. Allow Users to exchange crypto right from your web front end. This repo contains all the files to add the n2DeX 0x Protocol DeFI Swap Interface to your NextJS Project! Be sure to watch my Youtube tutorial vid and follow along!
 
-First, run the development server:
+<div class='row'>
+<img src="https://github.com/net2devcrypto/misc/blob/main/dashboard.PNG" width="320" height="400">
+<img src="https://github.com/net2devcrypto/misc/blob/main/dashboard2.PNG" width="300" height="400">
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
+** THE FILES ATTACHED TO THIS REPO ARE FOR EDUCATIONAL PURPOSES ONLY **
+
+** NOT FINANCIAL ADVISE **
+
+** USE IT AT YOUR OWN RISK** **I'M NOT RESPONSIBLE FOR ANY USE, ISSUES ETC.. **
+  
+Click for video:
+
+<a href="https://youtu.be/adD83Y38NS8" target="_blank"><img src="https://github.com/net2devcrypto/misc/blob/main/ytlogo2.png" width="150" height="40"></a> 
+
+Steps:
+
+1-Create an new NextJS app:
+
+```shell
+npx create-next-app defiswap
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2- Install Dependencies:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```shell
+cd defiswap
+npm i @nextui-org/react web3 web3modal ethers alchemy-sdk sf-font
+npm i --save-dev @types/react
+npm i --save-dev @types/qs
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3- Replace all files and folders in your project with the ones attached to this repo.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Add all files and folders to the root project directory "defiswap", overwrite when prompted.
 
-## Learn More
+4- Create a new Alchemy API App for Ethereum Mainnet and update the API Key field with your
 
-To learn more about Next.js, take a look at the following resources:
+Alchemy API Key in the defiswap.js file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```shell
+ const config = {
+      apiKey: "PLACE YOUR API KEY",
+      network: Network.ETH_MAINNET,
+    };
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Save File after updating!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5- Start your application, navigate to the project page and enjoy!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```shell
+npm run dev
+```
+
+############################################################################ 
+
+OPTIONAL - If you just need to add the DeFI swap to any NextJS Project:
+
+- Install dependencies from step 2 to your project root folder.
+
+- Add the engine folder and the public folder contents to your project root folder. 
+
+- Add the tokens.js in pages/api folder and the defiswap.js in /pages folder.
+
+- Import the defiswap interface in app.js or any other page accordingly:
+
+```shell
+import Defiswap from './defiswap';
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <div>
+      <Defiswap />
+    </div>
+  );
+}
+
+```
+
+
+
